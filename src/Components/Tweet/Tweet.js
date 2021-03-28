@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Card } from 'react-bootstrap';
+
 
 const Tweet = (props) => {
-    const {text, author, date} = props;
+    const { text, author, date } = props;
     return (
         <div>
-            <h3>This is {text.toUpperCase()} component</h3>
-            <h6>by {author} on {date}</h6>
+            <Card style={{ width: '50rem', margin: 'auto', marginBottom:'30px' }}>
+                <Card.Body>
+                    <Card.Title>{author}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
+                    <Card.Text>
+                        {text}
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         </div>
     );
 };
