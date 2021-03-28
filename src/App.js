@@ -17,9 +17,8 @@ function App() {
   }
 
   useEffect( () => {
-    console.log("axios", data);
     fetchData();
-  },[])
+  },[]);
   return (
     <div style={{ background: 'black', padding: '20px'}}>
       <h3 style={{color: 'white'}}>Tweets Loaded: {data.length}</h3>
